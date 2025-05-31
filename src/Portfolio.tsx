@@ -24,7 +24,7 @@ interface Testimonial {
 }
 
 const Portfolio: React.FC = () => {
-  const [activeProject, setActiveProject] = useState<string | null>(null);
+  const [_activeProject, setActiveProject] = useState<string | null>(null);
 
   const projects: Project[] = [
     {
