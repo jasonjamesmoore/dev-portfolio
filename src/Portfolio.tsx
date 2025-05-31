@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Github, ExternalLink, Mail, Linkedin, Code, Star, ChevronRight, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -24,7 +24,7 @@ interface Testimonial {
 }
 
 const Portfolio: React.FC = () => {
-  const [_activeProject, setActiveProject] = useState<string | null>(null);
+  
 
   const projects: Project[] = [
     {
@@ -171,8 +171,6 @@ const Portfolio: React.FC = () => {
               <Card 
                 key={project.id}
                 className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105"
-                onMouseEnter={() => setActiveProject(project.id)}
-                onMouseLeave={() => setActiveProject(null)}
               >
                 <div className="relative overflow-hidden">
                   <img 
